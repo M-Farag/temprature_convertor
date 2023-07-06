@@ -12,5 +12,16 @@ double convertToFahrenheit(double degree)
 
 
 int main() {
-    std::cout << "Hello, Write a degree and 'c' to convert to 'Celsius' & 'f' to convert to 'Fahrenheit' \n";
+    std::cout << "Hello, Write a degree ?! \n Please write 'c' to convert to 'Celsius' & 'f' to convert to 'Fahrenheit' \n";
+    
+    double userDegree = 0;
+    char userConvertType = 'c';
+    
+    std::cin >> userDegree >> userConvertType;
+    
+    if (userConvertType == 'f') {
+        std::cout << "Degree " << userDegree << " Celsius to Fahrenheit = " << convertToFahrenheit(userDegree) << "\n";
+    } else {
+        std::cout << "Degree " << userDegree << " Fahrenheit to Celsius = " << convertToCelsius(userDegree) << "\n";
+    }
 }
